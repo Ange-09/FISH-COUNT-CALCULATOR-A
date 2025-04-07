@@ -1,0 +1,87 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inria Serif", serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.bg{
+    background-color: #000000;
+}
+
+/* HEADER STYLES */
+
+.header{
+    display: flex;
+    align-items: center;
+
+    height: 90px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
+
+    background: linear-gradient(to bottom, rgba(209, 209, 209, 0.65), rgba(209, 209, 209, 0.62), rgba(209, 209, 209, 0.59), rgba(209, 209, 209, 0.55), rgba(209, 209, 209, 0.52), rgba(255, 255, 255, 0)); 
+  }
+
+  .headera{
+    display: flex;
+    align-items: center;
+
+    height: 90px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    box-sizing: border-box;
+
+    background: #f2f2f2;
+  }
+
+.adulogo{
+    display: flex;
+    left: 5%;
+    position: relative;
+    width: 260px;
+    height: 56px;
+}
+
+.navbar{
+    display: flex;
+    margin-right: 5%;
+    gap: 20px;
+    flex-grow: 1;
+    justify-content: flex-end;
+}
+
+.navtext{
+    text-decoration: none;
+    color: #000000;
+    font-size: 20px;
+
+    font-family: "Inria Serif", serif;
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 100%;
+    background-color: #f2f2f2;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
