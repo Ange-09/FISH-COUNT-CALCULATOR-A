@@ -1,0 +1,40 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inria Serif", serif;
+}
+
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inria Serif", serif;
+}
+
+/* MODEL BREAKDOWN SECTION STYLES */
+.modelbd{
+    background-color: #dcdcdc;
+
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw;
+    margin-top: -40px; /* Adjust for the header height */
+    z-index: 0;
+
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.calculator{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 100vh; /* Full height of the viewport */
+    width: 100vw;
+    z-index: 0;
+}
