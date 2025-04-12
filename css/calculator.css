@@ -98,6 +98,7 @@ input[type="number"] {
 .calc-input{
     width: 50%;
     height: 30px;
+    padding: 20px;
 }
 
 .calc-varcontainer{
