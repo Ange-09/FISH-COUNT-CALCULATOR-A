@@ -33,18 +33,42 @@
             <div class="calc-incontainer">
                 <div class="calc-inincontainer">
                     <p class="calc-inputtitle">User Input</p>
-                    <p class="calc=ddtitle">Select Data Range</p>
+                    <p class="calc-ddtitle">Select Data Range</p>
                     <select class="calc-dd" id="dataRange" onchange="updateInputFields()">
                         <option value="average">3-Month Average</option>
                         <option value="period">3-Month Period</option>
                     </select>
-                    <div>
+                    <div id="averageInputs">
                         <p class="calc-inputname">Rainfall</p>
-                        <input class="calc-input" type="number" placeholder="Rainfall (mm)" id="rf">
+                        <input class="calc-input" type="number" placeholder="Rainfall (mm)" id="rf-avg">
                         <p class="calc-inputname">Temperature</p>
-                        <input class="calc-input" type="number" placeholder="Temperature (°C)" id="temp">
+                        <input class="calc-input" type="number" placeholder="Temperature (°C)" id="temp-avg">
                         <p class="calc-inputname">Water Hyacinth</p>
-                        <input class="calc-input" type="number" placeholder="Water Hyacinth (kg)" id="whac">
+                        <input class="calc-input" type="number" placeholder="Water Hyacinth (ha)" id="whac-avg">
+                    </div>
+                    <div id="periodInputs">
+                        <p class="calc-monthtitle">Month 1</p>
+                        <p class="calc-inputname">Rainfall</p>
+                        <input class="calc-input" type="number" placeholder="Rainfall (mm)" id="rf-m1">
+                        <p class="calc-inputname">Temperature</p>
+                        <input class="calc-input" type="number" placeholder="Temperature (°C)" id="temp-m1">
+                        <p class="calc-inputname">Water Hyacinth</p>
+                        <input class="calc-input" type="number" placeholder="Water Hyacinth (ha)" id="whac-m1">
+                        <p class="calc-monthtitle">Month 2</p>
+                        <p class="calc-inputname">Rainfall</p>
+                        <input class="calc-input" type="number" placeholder="Rainfall (mm)" id="rf-m2">
+                        <p class="calc-inputname">Temperature</p>
+                        <input class="calc-input" type="number" placeholder="Temperature (°C)" id="temp-m2">
+                        <p class="calc-inputname">Water Hyacinth</p>
+                        <input class="calc-input" type="number" placeholder="Water Hyacinth (ha)" id="whac-m2">
+                        <p class="calc-monthtitle">Month 3</p>
+                        <p class="calc-inputname">Rainfall</p>
+                        <input class="calc-input" type="number" placeholder="Rainfall (mm)" id="rf-m3">
+                        <p class="calc-inputname">Temperature</p>
+                        <input class="calc-input" type="number" placeholder="Temperature (°C)" id="temp-m3">
+                        <p class="calc-inputname">Water Hyacinth</p>
+                        <input class="calc-input" type="number" placeholder="Water Hyacinth (ha)" id="whac-m3">
+
                     </div>
                 </div>
             </div>
@@ -57,4 +81,5 @@
     <footer class="footer">
 
     </footer>
+    <script src="calculatorscript.js"></script>
 </body>
