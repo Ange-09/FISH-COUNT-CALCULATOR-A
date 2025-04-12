@@ -88,6 +88,22 @@ input[type="number"] {
 }
 
 
+.calc-inputtitle{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 80px;
+    margin-top: -50px;
+}
+
+.calc-dd{
+    width: 50%;
+    height: 30px;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: bold;
+}
+
 .calc-inputname{
     color: white;
     font-size: 20px;
@@ -98,7 +114,6 @@ input[type="number"] {
 .calc-input{
     width: 50%;
     height: 30px;
-    padding: 20px;
 }
 
 .calc-varcontainer{

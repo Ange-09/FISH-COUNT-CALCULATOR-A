@@ -32,12 +32,20 @@
         <section id="calculator" class="calculator">
             <div class="calc-incontainer">
                 <div class="calc-inincontainer">
-                    <p class="calc-inputname">Rainfall</p>
-                    <input class="calc-input" type="number" placeholder="Rainfall (mm)" id="rf">
-                    <p class="calc-inputname">Temperature</p>
-                    <input class="calc-input" type="number" placeholder="Temperature (°C)" id="temp">
-                    <p class="calc-inputname">Water Hyacinth</p>
-                    <input class="calc-input" type="number" placeholder="Water Hyacinth (kg)" id="whac">
+                    <p class="calc-inputtitle">User Input</p>
+                    <p class="calc=ddtitle">Select Data Range</p>
+                    <select class="calc-dd" id="dataRange" onchange="updateInputFields()">
+                        <option value="average">3-Month Average</option>
+                        <option value="period">3-Month Period</option>
+                    </select>
+                    <div>
+                        <p class="calc-inputname">Rainfall</p>
+                        <input class="calc-input" type="number" placeholder="Rainfall (mm)" id="rf">
+                        <p class="calc-inputname">Temperature</p>
+                        <input class="calc-input" type="number" placeholder="Temperature (°C)" id="temp">
+                        <p class="calc-inputname">Water Hyacinth</p>
+                        <input class="calc-input" type="number" placeholder="Water Hyacinth (kg)" id="whac">
+                    </div>
                 </div>
             </div>
             <div class="calc-varcontainer">
