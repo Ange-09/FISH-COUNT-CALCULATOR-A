@@ -58,6 +58,10 @@ input[type="number"] {
     -moz-appearance: textfield;
 }
 
+.calc-br{
+    padding: 10px;
+}
+
 /* CALCULATOR SECTION STYLES */
 
 /* Initially hides inputs */
@@ -126,8 +130,6 @@ input[type="number"] {
     color: rgb(255, 255, 255);
     font-size: 20px;
     font-weight: bold;
-    padding-bottom: 5px;
-    padding-top: 10px;
 }
 
 .calc-inputname{
@@ -217,11 +219,19 @@ td {
 .calc-outcontainer{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: top;
     align-items: center;
     width: 35%;
     height: 100%;
     background-color: rgb(166, 123, 67);
+}
+
+.calc-outtitle{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 100px;
+    margin-top: 18px;
 }
 
 
