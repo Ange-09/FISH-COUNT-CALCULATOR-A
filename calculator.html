@@ -86,40 +86,51 @@
                     </tr>
                     <tr>
                         <td>Biochemical Oxygen Demand</td>
-                        <td id="bod-value"></td>
+                        <td id="bodValue"></td>
                     </tr>
                     <tr>
                         <td>Dissolved Oxygen</td>
-                        <td id="do-value"></td>
+                        <td id="disoxValue"></td>
                     </tr>
                     <tr>
                         <td>Fecal Coliform</td>
-                        <td id="fc-value"></td>
+                        <td id="fcValue"></td>
                     </tr>
                     <tr>
                         <td>pH Level</td>
-                        <td id="ph-value"></td>
+                        <td id="phValue"></td>
                     </tr>
                     <tr>
                         <td>Ammonia</td>
-                        <td id="ammonia-value"></td>
+                        <td id="ammoniaValue"></td>
                     </tr>
                     <tr>
                         <td>Nitrate</td>
-                        <td id="nitrate-value"></td>
+                        <td id="nitrateValue"></td>
                     </tr>
                     <tr>
                         <td>Phosphate</td>
-                        <td id="phosphate-value"></td>
+                        <td id="phosphateValue"></td>
                     </tr>
                 </table>
                 <div><button class="calc-button" id="calculateBtn" onclick="calculate()">Calculate</button></div>
             </div>
             <div class="calc-outcontainer">
                 <p class="calc-outtitle">Fish Count Prediction</p>
-                <div id="computedrf">Rainfall</div>
-                <div id="computedtemp">Temperature</div>
-                <div id="computedwhac">Water Hyacinth Coverage Area</div>
+                <div class="calc-outoutcontainer">
+                    <p class="calc-ddtitle">Select Location</p>
+                    <select class="calc-outdd" id="location">
+                        <option value="laguna">Laguna</option>
+                        <option value="rizal">Rizal</option>
+                        <option value="taguig">Taguig/Muntinlupa</option>
+                        <option value="all">All</option>
+                        <br class="calc-br">
+                    </select>
+                    <div class="calc-answertitle">Estimated Fish Count:</div>
+                    <div id="answer" class="calc-answer"></div>
+                    <div id="answera" class="calc-answer"></div>
+                    <div id="answerb" class="calc-answer"></div>
+                </div>
             </div>
         </section>
     </main>

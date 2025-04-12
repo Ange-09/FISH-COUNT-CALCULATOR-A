@@ -56,6 +56,10 @@ function calculate(){
         computedwhac = (whacm1 + whacm2 + whacm3) / 3
     }
 
+    document.getElementById("computedrf").textContent = computedrf.toFixed(2);
+    document.getElementById("computedtemp").textContent = computedtemp.toFixed(2);
+    document.getElementById("computedwhac").textContent = computedwhac.toFixed(2);
+
     // Water Quality Variable Display
     let bod, disox, fc, ph, ammonia, nitrate, phosphate;
     let bodDisplay, disoxDisplay, fcDisplay, phDisplay, ammoniaDisplay, nitrateDisplay, phosphateDisplay;
@@ -92,30 +96,26 @@ function calculate(){
     switch (location){
         case "laguna":
             FClaguna = bod * 0.5 + disox * 0.3 + fc * 0.2;
-            fishCount = FClaguna
-            document.getElementById("answer").textContent = `Laguna - ${fishCount.toFixed(0)}`;
+            document.getElementById("answer").textContent = FClaguna.toFixed(2);
             break;
         case "rizal":
             FCrizal = bod * 0.4 + disox * 0.4 + fc * 0.2;
-            fishCount = FCrizal
-            document.getElementById("answer").textContent = `Rizal - ${fishCount.toFixed(0)}`;
+            document.getElementById("answer").textContent = FCrizal.toFixed(2);
             break;
         case "taguig":
             FCtaguig = bod * 0.3 + disox * 0.5 + fc * 0.2;
-            fishCount = FCtaguig
-            document.getElementById("answer").textContent =
-            document.getElementById("answer").textContent = `Taguig/Muntinlupa - ${fishCount.toFixed(0)}`;
+            document.getElementById("answer").textContent = FCtaguig.toFixed(2);
             break;
         case "all":
             FClaguna = bod * 0.5 + disox * 0.3 + fc * 0.2;
             FCrizal = bod * 0.4 + disox * 0.4 + fc * 0.2;
             FCtaguig = bod * 0.3 + disox * 0.5 + fc * 0.2;
-            document.getElementById("answer").textContent = `Laguna - ${FClaguna.toFixed(0)}`;
-            document.getElementById("answera").textContent = `Rizal - ${FCrizal.toFixed(0)}`;
-            document.getElementById("answerb").textContent = `Taguig/Muntinlupa - ${FCtaguig.toFixed(0)}`;
+            document.getElementById("answer").textContent = (FClaguna + FCrizal + FCtaguig).toFixed(2);
             break;
         default:
             document.getElementById("answer").textContent = "Invalid location";
     }
+
+
 
 }
