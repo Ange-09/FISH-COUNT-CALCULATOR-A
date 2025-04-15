@@ -78,7 +78,7 @@
     width: 100vw;
     z-index: 0;
 
-    background-image: url('../images/ovrightbg.jpg');
+    background-image: url('../images/ovrightbg.png');
     background-size: cover;           /* Crops image to fill the div while maintaining aspect ratio */
     background-position: center;      /* Keeps the image centered */
     background-repeat: no-repeat;     /* Prevents tiling */
