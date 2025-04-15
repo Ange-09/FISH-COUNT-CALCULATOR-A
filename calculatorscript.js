@@ -94,17 +94,22 @@ function calculate(){
             FClaguna = bod * 0.5 + disox * 0.3 + fc * 0.2;
             fishCount = FClaguna
             document.getElementById("answer").textContent = `Laguna - ${fishCount.toFixed(0)}`;
+            document.getElementById("answera").textContent = "";
+            document.getElementById("answerb").textContent = "";
             break;
         case "rizal":
             FCrizal = bod * 0.4 + disox * 0.4 + fc * 0.2;
             fishCount = FCrizal
             document.getElementById("answer").textContent = `Rizal - ${fishCount.toFixed(0)}`;
+            document.getElementById("answera").textContent = "";
+            document.getElementById("answerb").textContent = "";
             break;
         case "taguig":
             FCtaguig = bod * 0.3 + disox * 0.5 + fc * 0.2;
             fishCount = FCtaguig
-            document.getElementById("answer").textContent =
             document.getElementById("answer").textContent = `Taguig/Muntinlupa - ${fishCount.toFixed(0)}`;
+            document.getElementById("answera").textContent = "";
+            document.getElementById("answerb").textContent = "";
             break;
         case "all":
             FClaguna = bod * 0.5 + disox * 0.3 + fc * 0.2;

@@ -78,7 +78,7 @@
     width: 100vw;
     z-index: 0;
 
-    background-image: url('../images/ovrightbg.png');
+    background-image: url('../images/ovrighbg.png');
     background-size: cover;           /* Crops image to fill the div while maintaining aspect ratio */
     background-position: center;      /* Keeps the image centered */
     background-repeat: no-repeat;     /* Prevents tiling */
@@ -94,10 +94,11 @@
     width: 40%;
     height: 100vh; /* Full height of the viewport */
     z-index: 0;
+    background-color:#7B8A8B;
 }
 
 .ov-image{
-    width: 50%;
+    width: 70%;
     height: 70%;
     border-radius: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
@@ -112,6 +113,7 @@
     width: 60%;
     height: 100vh; /* Full height of the viewport */
     z-index: 0;
+    background-color: whitesmoke;
 }
 
 .ov-description{
