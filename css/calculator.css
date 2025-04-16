@@ -17,6 +17,9 @@
 /* MODEL BREAKDOWN SECTION STYLES */
 .modelbd{
     background-color: #dcdcdc;
+    background-image: url("../images/modelbd.png");
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
 
     height: 105vh; /* Full height of the viewport */
     width: 100vw;
