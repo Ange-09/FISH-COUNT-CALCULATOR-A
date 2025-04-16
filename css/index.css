@@ -24,6 +24,7 @@
     position: relative;
     justify-content: center;
     align-items: flex-start;
+    animation: fadeIn 2s ease-out forwards;
 }
 
 .title{
@@ -113,7 +114,7 @@
     width: 60%;
     height: 100vh; /* Full height of the viewport */
     z-index: 0;
-    background-color: whitesmoke;
+    background-color: #B9C0C2;
 }
 
 .ov-description{
@@ -132,7 +133,65 @@
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent black box */
     backdrop-filter: blur(4px); /* Blur background behind box */
     -webkit-backdrop-filter: blur(4px); /* Safari support */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 
-    border-radius: 12px; /* Optional: for smooth corners */
+    border-radius: 20px; /* Optional: for smooth corners */
     color: white; /* Adjust text color for contrast */
 }
+
+/* ANIMATIONS */
+
+/* Initial hidden state for elements */
+.ov-description, .ov-image {
+  opacity: 0;
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Fade In */
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  
+  .fadeIn {
+    animation: fadeIn 1.5s ease-out forwards;
+  }
+
+
+  /* Slide From Left */
+  @keyframes slideInLeft {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .slideInLeft {
+    animation: slideInLeft 1s ease-out forwards;
+  }
+
+  @keyframes slideInRight {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  .slideInRight {
+    animation: slideInRight 1s ease-out forwards;
+  }
