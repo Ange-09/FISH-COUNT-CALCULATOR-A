@@ -89,32 +89,63 @@
 
 .overview-left{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+
     width: 40%;
     height: 100vh; /* Full height of the viewport */
     z-index: 0;
-    background-color:#7B8A8B;
+    background-color: #dfe9f3;
 }
 
 .ov-image{
     width: 70%;
-    height: 70%;
+    height: 50%;
     border-radius: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+    margin-top: 20%;
+}
+
+.ov-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    z-index: 0;
+    margin-top: 10%;
+    width: 80%;
+
+
+}
+
+.ov-buttons button{
+  background-color: #2C3E50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 10px 20px;
+  font-size: 100%;
+  max-width: 200px;
+  min-width: 50px;
+}
+
+.ov-buttons button.active {
+  background-color: #4481b9; /* a lighter shade of #2C3E50 */
+  box-shadow: 0 0 5px #3E5870;
 }
 
 /* RIGHT OVERVIEW */
 
 .overview-right{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    flex-direction: column;
     width: 60%;
     height: 100vh; /* Full height of the viewport */
     z-index: 0;
-    background-color: #B9C0C2;
+    background-color: #dfe9f3;
 }
 
 .ov-description{
@@ -123,11 +154,12 @@
     align-items: center;
     flex-direction: column;
     width: 80%;
-    height: 60%;
+    height: 40%;
+    margin-top: 20%;
 
     z-index: 0;
     padding: 20px;
-    font-size: clamp(16px, 4vw, 32px);
+    font-size: 3.2vh;
     text-align: justify;
 
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent black box */
@@ -193,3 +225,14 @@
   .slideInRight {
     animation: slideInRight 1s ease-out forwards;
   }
+
+  .fade-out {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .fade-in {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  

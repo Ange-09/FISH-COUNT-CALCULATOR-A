@@ -35,10 +35,15 @@
         </section>
         <section id="overview" class="overview">
             <div class="overview-left">
-                <img class="ov-image" src="images/ovimage.png">
+                <img id="ov-image" class="ov-image" src="images/ovimage.png">
+                <div class="ov-buttons">
+                    <button onclick="showReason(0)">Livelihood & Food Security</button>
+                    <button onclick="showReason(1)">Environmental Management</button>
+                    <button onclick="showReason(2)">Sustainable Ecosystems</button>
+                </div>
             </div>
             <div class="overview-right">
-                <p class="ov-description">We developed Laguna LakeCast to offer predictive insights into the health of Laguna Lake. The proliferation of water hyacinth and fluctuating water quality significantly impact the lake's fish count. Our research models these relationships to support informed decision-making. This website helps preserve Laguna Lake by providing crucial data for sustainable management strategies.</p>
+                <p id="ov-description" class="ov-description">Forecasting fish count allows fishing communities around Laguna Lake to anticipate changes in fish availability. With over 13,000 fishermen relying on the lake for income and Metro Manila depending on it for fish supply, being able to predict declines or increases in fish populations helps communities plan ahead, reduce losses, and maintain stable food access.</p>
             </div>
         </section>
     </main>
