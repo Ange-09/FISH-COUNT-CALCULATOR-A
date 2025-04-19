@@ -1,3 +1,17 @@
+window.addEventListener("load", () => {
+  const loader = document.getElementById("loader");
+
+  // Simulate a slow load with a timeout
+  setTimeout(() => {
+    loader.style.opacity = "0";
+    setTimeout(() => {
+      loader.style.display = "none";
+    }, 500); // fade out
+  }, 2000); // delay loader for 2 seconds
+});
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
     const faders = document.querySelectorAll(".ov-description");
   

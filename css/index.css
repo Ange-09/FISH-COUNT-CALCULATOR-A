@@ -6,6 +6,37 @@
     font-family: "Inria Serif", serif;
 }
 
+/* LOADER OVERLAY */
+#loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #1c1c1c; /* Or your site background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Spinner animation */
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid #ffffff;
+  border-top: 6px solid #4481b9; /* Accent color */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+/* Spin animation */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 /* HERO SECTION STYLES */
 .hero{
     background-image: url('../images/herobg.png'); /* Replace with your image file */
