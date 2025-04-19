@@ -58,15 +58,15 @@ document.addEventListener("DOMContentLoaded", () => {
   const reasons = [
     {
       text: "Forecasting fish count allows fishing communities around Laguna Lake to anticipate changes in fish availability. With over 13,000 fishermen relying on the lake for income and Metro Manila depending on it for fish supply, being able to predict declines or increases in fish populations helps communities plan ahead, reduce losses, and maintain stable food access.",
-      image: "images/ovimage.png"
+      image: "images/img1.png"
     },
     {
       text: "By predicting fish count based on water quality indicators like dissolved oxygen, BOD, and nutrient levels, environmental agencies such as LLDA and DENR can detect early warning signs of ecological stress. This empowers policymakers to respond proactively, enforce regulations, and manage water hyacinth proliferation more effectively to protect the lake’s biodiversity.",
-      image: "image2.jpg"
+      image: "images/img2.png"
     },
     {
       text: "The predictive model developed from this study can be scaled and applied to other lakes in the Philippines. By understanding how water quality affects fish populations, researchers and stakeholders across the country can replicate this forecasting method to monitor aquatic health, manage invasive species, and foster long-term ecological sustainability in other freshwater bodies.",
-      image: "image3.jpg"
+      image: "images/img3.png"
     }
   ];
   

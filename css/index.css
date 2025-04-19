@@ -6,6 +6,7 @@
     font-family: "Inria Serif", serif;
 }
 
+
 /* LOADER OVERLAY */
 #loader {
   position: fixed;
@@ -43,7 +44,6 @@
     background-size: cover; /* Ensures the image covers the whole screen */
     background-position: bottom center; /* Centers the image */
     background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-color: black;
 
     height: 105vh; /* Full height of the viewport */
     width: 100vw;
@@ -111,7 +111,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    height: 100vh; /* Full height of the viewport */
+    min-height: 100vh; /* Full height of the viewport */
     width: 100vw;
     z-index: 0;
     background: linear-gradient(to bottom, #5a7695, #aac1dc, #cfddeb, #eaf1f8);
