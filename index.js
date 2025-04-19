@@ -12,7 +12,7 @@ window.addEventListener("load", () => {
       // Trigger hero animation AFTER loader disappears
       hero.classList.add("fadeIn");
     }, 500);
-  }, 2000);
+  }, 500);
 });
 
 
