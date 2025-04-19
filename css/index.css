@@ -78,11 +78,8 @@
     height: 100vh; /* Full height of the viewport */
     width: 100vw;
     z-index: 0;
+    background: linear-gradient(to bottom, #aac1dc, #eaf1f8);
 
-    background-image: url('../images/ovrighbg.png');
-    background-size: cover;           /* Crops image to fill the div while maintaining aspect ratio */
-    background-position: center;      /* Keeps the image centered */
-    background-repeat: no-repeat;     /* Prevents tiling */
 }
 
 /* LEFT OVERVIEW */
@@ -93,10 +90,9 @@
     align-items: center;
     flex-direction: column;
 
-    width: 40%;
+    width: 50%;
     height: 100vh; /* Full height of the viewport */
     z-index: 0;
-    background-color: #dfe9f3;
 }
 
 .ov-image{
@@ -104,35 +100,56 @@
     height: 50%;
     border-radius: 20px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-    margin-top: 20%;
+    justify-self: center;
+    margin-top: 15%;
 }
 
 .ov-buttons{
     display: flex;
+    align-self: center;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     z-index: 0;
-    margin-top: 10%;
-    width: 80%;
+    margin-top: 4%;
+    margin-left: 10%;
 
-
+    width: 90%;
 }
 
-.ov-buttons button{
-  background-color: #2C3E50;
-  color: white;
+.ov-buttons button {
+  background: none;
+  border: none;
+  color: #ffffff; /* Or white or whatever color you want */
   cursor: pointer;
-  transition: background-color 0.3s;
-  padding: 10px 20px;
-  font-size: 100%;
-  max-width: 200px;
-  min-width: 50px;
+  font-size: 2.8vh;
+  font-weight: bold;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+  text-decoration: none; /* Remove underline */
+
+  position: relative;
 }
 
-.ov-buttons button.active {
-  background-color: #4481b9; /* a lighter shade of #2C3E50 */
-  box-shadow: 0 0 5px #3E5870;
+.ov-buttons button::after {
+  content: ''; /* Creates an empty element after the text */
+  position: absolute;
+  bottom: -8px; /* Adjusts the distance of the underline from the text */
+  left: 0;
+  width: 70%;
+  height: 5px; /* Controls the thickness of the underline */
+  background-color: #4481b9; /* Underline color */
+  border-radius: 2px; /* Rounds the edges of the underline */
+  transform: scaleX(0); /* Initially hide the underline */
+  transform-origin: bottom right; /* Start the animation from the right */
+  transition: transform 0.3s ease; /* Smooth transition for the underline */
+}
+
+.ov-buttons button:hover::after,
+.ov-buttons button.active::after {
+  transform: scaleX(1); /* Show the underline on hover or when active */
+  transform-origin: bottom left; /* Animate from the left */
 }
 
 /* RIGHT OVERVIEW */
@@ -142,23 +159,29 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    width: 60%;
+    width: 50%;
     height: 100vh; /* Full height of the viewport */
     z-index: 0;
-    background-color: #dfe9f3;
+}
+
+.ov-title{
+    color: #ffffff;
+    font-size: 8.5vh;
+    font-weight: bold;
+    filter: drop-shadow(6px 6px 10px rgba(0, 0, 0, .8));
+    text-align: left;
 }
 
 .ov-description{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-self: center;
+    align-self: center;
     flex-direction: column;
     width: 80%;
-    height: 40%;
-    margin-top: 20%;
+    margin-top: 10%;
 
     z-index: 0;
-    padding: 20px;
+    padding: 10px;
     font-size: 3.2vh;
     text-align: justify;
 
@@ -167,8 +190,11 @@
     -webkit-backdrop-filter: blur(4px); /* Safari support */
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 
+    padding: auto;
     border-radius: 20px; /* Optional: for smooth corners */
     color: white; /* Adjust text color for contrast */
+    border-left: 12px solid #4ba3d9;
+
 }
 
 /* ANIMATIONS */
@@ -226,13 +252,4 @@
     animation: slideInRight 1s ease-out forwards;
   }
 
-  .fade-out {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  
-  .fade-in {
-    opacity: 1;
-    transition: opacity 0.5s ease;
-  }
   

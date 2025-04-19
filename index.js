@@ -52,30 +52,24 @@ document.addEventListener("DOMContentLoaded", () => {
   ];
   
   function showReason(index, btn) {
-    const desc = document.getElementById("ov-description");
-    const image = document.getElementById("ov-image");
+    // Update content
+    document.getElementById("ov-description").textContent = reasons[index].text;
+    document.getElementById("ov-image").src = reasons[index].image;
   
-    // Add fade-out
-    desc.classList.remove("fade-in");
-    image.classList.remove("fade-in");
-    desc.classList.add("fade-out");
-    image.classList.add("fade-out");
-  
-    // After fade-out is done, update content and fade in
-    setTimeout(() => {
-      desc.textContent = reasons[index].text;
-      image.src = reasons[index].image;
-  
-      desc.classList.remove("fade-out");
-      image.classList.remove("fade-out");
-      desc.classList.add("fade-in");
-      image.classList.add("fade-in");
-    }, 300); // match your CSS transition time
-    
-  
-    // Update button active class
+    // Remove "selected" from all buttons
     const allButtons = document.querySelectorAll(".reason-btn");
     allButtons.forEach(button => button.classList.remove("selected"));
+  
+    // Add "selected" to the clicked button
     btn.classList.add("selected");
   }
-  
+
+  // Buttons Stay Lit When Clicked
+  const buttons = document.querySelectorAll('.ov-buttons button');
+
+buttons.forEach(button => {
+  button.addEventListener('click', () => {
+    buttons.forEach(btn => btn.classList.remove('active')); // clear others
+    button.classList.add('active'); // light up clicked
+  });
+});
