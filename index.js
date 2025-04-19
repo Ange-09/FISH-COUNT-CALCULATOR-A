@@ -1,13 +1,18 @@
 window.addEventListener("load", () => {
   const loader = document.getElementById("loader");
+  const hero = document.querySelector(".hero");
 
-  // Simulate a slow load with a timeout
+  // Simulate delay to test
   setTimeout(() => {
     loader.style.opacity = "0";
+
     setTimeout(() => {
       loader.style.display = "none";
-    }, 500); // fade out
-  }, 2000); // delay loader for 2 seconds
+
+      // Trigger hero animation AFTER loader disappears
+      hero.classList.add("fadeIn");
+    }, 500);
+  }, 2000);
 });
 
 

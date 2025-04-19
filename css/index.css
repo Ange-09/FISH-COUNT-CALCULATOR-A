@@ -55,7 +55,12 @@
     position: relative;
     justify-content: center;
     align-items: flex-start;
-    animation: fadeIn 2s ease-out forwards;
+    opacity: 0; /* Start hidden */
+   transition: opacity 1s ease-out;
+}
+
+.hero.fadeIn {
+  animation: fadeIn 2s ease-out forwards;
 }
 
 .title{
