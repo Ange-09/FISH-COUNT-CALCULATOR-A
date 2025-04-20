@@ -261,6 +261,20 @@
 
 }
 
+.forecast-button{
+  width: 20vw;
+  height: 5vh;
+  margin-top: 10%;
+
+  background-color: #2C3E50;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+
+  font-size: 3vh;
+  color: white;
+}
+
 /* ANIMATIONS */
 
 /* Initial hidden state for elements */
