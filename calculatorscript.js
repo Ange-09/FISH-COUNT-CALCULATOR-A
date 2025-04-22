@@ -164,7 +164,7 @@ function calculate(){
             + 1.23420696603556 * phosphateDisplay;
             
             fishCount = Math.pow(0.02 * FClaguna + 1, 1 / 0.02);
-            document.getElementById("answer").textContent = `Laguna = ${fishCount.toFixed(2)} metric tons`;
+            document.getElementById("answer").textContent = `Laguna = ${fishCount.toFixed(2)} mt (t)`;
             document.getElementById("answera").textContent = "";
             document.getElementById("answerb").textContent = "";
             break;
@@ -179,7 +179,7 @@ function calculate(){
             - 2.59762457790903 * phosphateDisplay;
 
             fishCount = (19138 * Math.exp((FCrizal - 0.436622) / 0.868131) + 1207.26) / (1 + Math.exp((FCrizal - 0.436622) / 0.868131));
-            document.getElementById("answer").textContent = `Rizal = ${fishCount.toFixed(2)} metric tons`;
+            document.getElementById("answer").textContent = `Rizal = ${fishCount.toFixed(2)} mt (t)`;
             document.getElementById("answera").textContent = "";
             document.getElementById("answerb").textContent = "";
             break;
@@ -215,7 +215,7 @@ function calculate(){
             + 82746.2045352212 * nitrateDisplay * phosphateDisplay;
 
             fishCount = FCtaguig
-            document.getElementById("answer").textContent = `Taguig/Muntinlupa = ${fishCount.toFixed(2)} metric tons`;
+            document.getElementById("answer").textContent = `Taguig/Muntinlupa = ${fishCount.toFixed(2)} mt (t)`;
             document.getElementById("answera").textContent = "";
             document.getElementById("answerb").textContent = "";
             break;
@@ -271,9 +271,9 @@ function calculate(){
             let lagunaFC = Math.pow(0.02 * FClaguna + 1, 1 / 0.02);
             let rizalFC = (19138 * Math.exp((FCrizal - 0.436622) / 0.868131) + 1207.26) / (1 + Math.exp((FCrizal - 0.436622) / 0.868131));
 
-            document.getElementById("answer").textContent = `Laguna = ${lagunaFC.toFixed(2)} metric tons`;
-            document.getElementById("answera").textContent = `Rizal = ${rizalFC.toFixed(2)} metric tons`;
-            document.getElementById("answerb").textContent = `Taguig/Muntinlupa = ${FCtaguig.toFixed(2)} metric tons`;
+            document.getElementById("answer").textContent = `Laguna = ${lagunaFC.toFixed(2)} mt (t)`;
+            document.getElementById("answera").textContent = `Rizal = ${rizalFC.toFixed(2)} mt (t)`;
+            document.getElementById("answerb").textContent = `Taguig/Muntinlupa = ${FCtaguig.toFixed(2)} mt (t)`;
             break;
         default:
             document.getElementById("answer").textContent = "Invalid location";
