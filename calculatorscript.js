@@ -60,79 +60,93 @@ function calculate(){
     let bod, disox, fc, ph, ammonia, nitrate, phosphate;
     let bodDisplay, disoxDisplay, fcDisplay, phDisplay, ammoniaDisplay, nitrateDisplay, phosphateDisplay;
 
-    bod = -5.97 - 0.080 * computedwhac + 0.2673 * computedtemp + 0.001211 * computedrf;
+    bod = -5.96963814136802 
+    - 0.0796890798750022 * computedwhac 
+    + 0.267287884817956 * computedtemp 
+    + 0.0012106465298565 * computedrf;
 
-    disox = 25.3 - 18.2 * computedwhac - 0.80 * computedtemp - 0.022 * computedrf
-    + 3.66 * computedwhac * computedwhac 
-    + 0.00038 * computedtemp * computedtemp 
-    + 0.000003 * computedrf * computedrf 
-    + 0.60 * computedwhac * computedtemp 
-    + 0.014 * computedwhac * computedrf 
-    + 0.00092 * computedtemp * computedrf 
-    - 0.00074 * computedwhac * computedtemp * computedrf
-    ;
+    disox = 25.346134937383 
+    - 18.162843612709 * computedwhac 
+    - 0.797532164668797 * computedtemp 
+    - 0.0218214942692021 * computedrf 
+    + 3.66214963005695 * computedwhac * computedwhac 
+    + 0.0003831812558317 * computedtemp * computedtemp 
+    + 0.0000026391425843 * computedrf * computedrf 
+    + 0.604466399340218 * computedwhac * computedtemp 
+    + 0.0139826849565213 * computedwhac * computedrf 
+    + 0.0009176198833357 * computedtemp * computedrf 
+    - 0.0007447014793646 * computedwhac * computedtemp * computedrf;
 
-    fc = 3.7 - 20.1 * computedwhac + 0.63 * computedtemp - 0.161 * computedrf
-    + 4.19 * computedwhac * computedwhac
-    - 0.019 * computedtemp * computedtemp
-    - 0.000009 * computedrf * computedrf
-    + 0.46 * computedwhac * computedtemp
-    + 0.162 * computedwhac * computedrf
-    + 0.00663 * computedtemp * computedrf
-    - 0.00644 * computedwhac * computedtemp * computedrf
-    ;
+    fc = 3.7 - 20.1120381777305 * computedwhac 
+    + 0.629837032249179 * computedtemp 
+    - 0.160836132125871 * computedrf 
+    + 4.18721111879697 * computedwhac * computedwhac 
+    - 0.0189607840950437 * computedtemp * computedtemp 
+    - 0.0000093305129161 * computedrf * computedrf 
+    + 0.46475030882002 * computedwhac * computedtemp 
+    + 0.161948103899138 * computedwhac * computedrf 
+    + 0.0066336069760361 * computedtemp * computedrf 
+    - 0.0064363642004059 * computedwhac * computedtemp * computedrf;
     
 
-    ph = 6.3 + 4.2 * computedwhac + 0.02 * computedtemp + 0.0588 * computedrf
-    + 0.32 * computedwhac * computedwhac
-    + 0.0020 * computedtemp * computedtemp
-    + 0.000001 * computedrf * computedrf
-    - 0.162 * computedwhac * computedtemp
-    - 0.0697 * computedwhac * computedrf
-    - 0.00240 * computedtemp * computedrf
-    + 0.00282 * computedwhac * computedtemp * computedrf;
+    ph = 6.32200916990859 
+    + 4.20247110290381 * computedwhac 
+    + 0.0183676553568897 * computedtemp 
+    + 0.0588385314961386 * computedrf 
+    + 0.318434438084706 * computedwhac * computedwhac 
+    + 0.0019700903493682 * computedtemp * computedtemp 
+    + 0.0000013280654752 * computedrf * computedrf 
+    - 0.161798179436803 * computedwhac * computedtemp 
+    - 0.0696918570546904 * computedwhac * computedrf 
+    - 0.0023970831131222 * computedtemp * computedrf 
+    + 0.0028167710092365 * computedwhac * computedtemp * computedrf;
     
 
-    ammonia = -1314 + 6 * computedwhac + 150 * computedtemp - 0.035 * computedrf
-    - 14.3 * Math.pow(computedwhac, 2) 
-    - 5.75 * Math.pow(computedtemp, 2) 
-    + 0.000045 * Math.pow(computedrf, 2) 
-    + 0.05 * computedwhac * computedtemp 
-    - 0.005 * computedwhac * computedrf 
-    + 0.00068 * computedtemp * computedrf 
-    + 6.5 * Math.pow(computedwhac, 3) 
-    + 0.0732 * Math.pow(computedtemp, 3) 
-    - 0.000000 * Math.pow(computedrf, 3) 
-    + 0.0005 * computedwhac * computedtemp * computedrf;
+    ammonia = -34.887127991911 
+    - 20.9300208131494 * computedwhac 
+    + 3.09358964338367 * computedtemp 
+    - 0.0886840849473376 * computedrf 
+    - 2.98619248282331 * Math.pow(computedwhac, 2) 
+    - 0.0735019059514106 * Math.pow(computedtemp, 2) 
+    + 0.000002722683721 * Math.pow(computedrf, 2) 
+    + 0.933863755462643 * computedwhac * computedtemp 
+    + 0.0472164005455918 * computedwhac * computedrf 
+    + 0.0033659823894808 * computedtemp * computedrf 
+    - 0.0018264398784996 * computedwhac * computedtemp * computedrf;
 
-    nitrate = 5.34 - 1.211 * computedwhac - 0.240 * computedtemp - 0.000601 * computedrf;
+    nitrate = 5.34408641916579 
+    - 1.21120724717597 * computedwhac 
+    - 0.240281225696217 * computedtemp 
+    - 0.0006012659656849 * computedrf;
 
-    phosphate = -12.0 + 11.7 * computedwhac + 0.49 * computedtemp + 0.0241 * computedrf
-    + 0.10 * computedwhac * computedwhac
-    - 0.0043 * computedtemp * computedtemp
-    - 0.000001 * computedrf * computedrf
-    - 0.45 * computedwhac * computedtemp
-    - 0.042 * computedwhac * computedrf
-    - 0.00097 * computedtemp * computedrf
-    + 0.00170 * computedwhac * computedtemp * computedrf;
-    
+    phosphate = -12.0009156809473 
+             + 11.7444915168474 * computedwhac 
+             + 0.4949100735191 * computedtemp 
+             + 0.0241031005698706 * computedrf 
+             + 0.0965957481454291 * computedwhac * computedwhac 
+             - 0.0043207547876708 * computedtemp * computedtemp 
+             - 0.0000012117841511 * computedrf * computedrf 
+             - 0.453556846423537 * computedwhac * computedtemp 
+             - 0.041931015146627 * computedwhac * computedrf 
+             - 0.00097240571126 * computedtemp * computedrf 
+             + 0.0016997736398341 * computedwhac * computedtemp * computedrf;
 
     bodDisplay = Math.pow(0.61 * bod + 1, 1 / 0.61);
     disoxDisplay = Math.pow(0.8 * disox + 1, 1 / 0.8);
     fcDisplay = Math.pow(-0.01 * fc + 1, 1 / -0.01);
     phDisplay = ph * 1;
-    ammoniaDisplay = Math.pow(0.004 * ammonia + 1, 1 / 0.04);
+    ammoniaDisplay = Math.pow(0.04 * ammonia + 1, 1 / 0.04);
     nitrateDisplay = Math.pow(0.13 * nitrate + 1, 1 / 0.13);
     phosphateDisplay = Math.pow(0.11 * phosphate + 1, 1 / 0.11);
     
-    document.getElementById("bodValue").textContent = bodDisplay.toFixed(4);
-    document.getElementById("disoxValue").textContent = disoxDisplay.toFixed(4);
-    document.getElementById("fcValue").textContent = fcDisplay.toFixed(4);
+    document.getElementById("bodValue").textContent = bodDisplay.toFixed(4) + " mg/L";
+    document.getElementById("disoxValue").textContent = disoxDisplay.toFixed(4) + " mg/L";
+    document.getElementById("fcValue").textContent = fcDisplay.toFixed(4) + " MPN/100mL";
     document.getElementById("phValue").textContent = phDisplay.toFixed(4);
-    document.getElementById("ammoniaValue").textContent = ammoniaDisplay.toFixed(4);
-    document.getElementById("nitrateValue").textContent = nitrateDisplay.toFixed(4);
-    document.getElementById("phosphateValue").textContent = phosphateDisplay.toFixed(4);
-
+    document.getElementById("ammoniaValue").textContent = ammoniaDisplay.toFixed(4) + " mg/L";
+    document.getElementById("nitrateValue").textContent = nitrateDisplay.toFixed(4) + " mg/L";
+    document.getElementById("phosphateValue").textContent = phosphateDisplay.toFixed(4) + " mg/L";
+    
     // Estimated Fish Count
 
     let FClaguna, FCrizal, FCtaguig;
@@ -140,101 +154,126 @@ function calculate(){
 
     switch (location){
         case "laguna":
-            FClaguna = 364470 
-            + 9587 * bod 
-            + 2156 * disox 
-            + 240.2 * fc 
-            - 99968 * ph 
-            + 147508 * ammonia 
-            + 322922 * nitrate 
-            - 178311 * phosphate 
-            + 439 * Math.pow(bod, 2) 
-            - 0.00885 * Math.pow(fc, 2) 
-            + 6727 * Math.pow(ph, 2) 
-            - 620097 * Math.pow(ammonia, 2) 
-            - 5886 * Math.pow(nitrate, 2) 
-            - 13.53 * bod * fc 
-            - 1865 * bod * ph 
-            + 14948 * bod * ammonia 
-            + 14700 * bod * nitrate 
-            + 35588 * bod * phosphate 
-            + 6.63 * disox * fc 
-            - 86611 * disox * ammonia 
-            + 7794 * disox * phosphate 
-            - 26.50 * fc * ph 
-            + 61.5 * fc * ammonia 
-            - 88.6 * fc * nitrate 
-            - 143.6 * fc * phosphate 
-            + 57119 * ph * ammonia 
-            - 41836 * ph * nitrate 
-            + 491782 * ammonia * phosphate 
-            + 82746 * nitrate * phosphate;
+            FClaguna = 17.8255290745475 
+            + 0.137591325868602 * bodDisplay 
+            - 1.03008052446161 * disoxDisplay
+            - 0.0003682548744485 * fcDisplay
+            - 0.446990494710632 * ph 
+            - 2.79981978245062 * ammoniaDisplay
+            + 0.646949393719925 * nitrateDisplay
+            + 1.23420696603556 * phosphateDisplay;
             
-            fishCount = FClaguna
-            document.getElementById("answer").textContent = `Laguna = ${fishCount.toFixed(0)}`;
+            fishCount = Math.pow(0.02 * FClaguna + 1, 1 / 0.02);
+            document.getElementById("answer").textContent = `Laguna = ${fishCount.toFixed(2)} metric tons`;
             document.getElementById("answera").textContent = "";
             document.getElementById("answerb").textContent = "";
             break;
         case "rizal":
-            FCrizal = 296.2 - 23.3 * bod - 32.1 * disox + 139 * fc - 32.9 * ph - 207 * ammonia 
-            - 286.9 * nitrate - 22.3 * phosphate + 1.493 * bod * bod + 181.1 * fc * fc 
-            + 2258 * ammonia * ammonia - 9.46 * nitrate * nitrate - 61 * phosphate * phosphate 
-            - 0.69 * bod * disox - 26.21 * bod * fc + 2.65 * bod * ph + 20.45 * disox * fc 
-            + 3.68 * disox * ph + 1.78 * disox * nitrate - 31.4 * fc * ph + 153.9 * fc * ammonia 
-            - 18.0 * fc * nitrate + 87.8 * fc * phosphate + 8.4 * ph * ammonia + 33.02 * ph * nitrate 
-            - 217 * ammonia * phosphate - 197.8 * fc * fc * fc - 8759 * ammonia * ammonia * ammonia 
-            + 523 * phosphate * phosphate * phosphate
-            ;
-            fishCount = FCrizal
-            document.getElementById("answer").textContent = `Rizal = ${fishCount.toFixed(0)}`;
+            FCrizal = -9.39632580946488 
+            + 0.0671537232292146 * bodDisplay
+            - 0.321675066889337 * disoxDisplay
+            + 0.0008873935112914 * fcDisplay
+            + 1.44721151573367 * phDisplay
+            - 0.30862709748541 * ammoniaDisplay
+            - 0.766425257434133 * nitrateDisplay
+            - 2.59762457790903 * phosphateDisplay;
+
+            fishCount = (19138 * Math.exp((FCrizal - 0.436622) / 0.868131) + 1207.26) / (1 + Math.exp((FCrizal - 0.436622) / 0.868131));
+            document.getElementById("answer").textContent = `Rizal = ${fishCount.toFixed(2)} metric tons`;
             document.getElementById("answera").textContent = "";
             document.getElementById("answerb").textContent = "";
             break;
         case "taguig":
-            FCtaguig = -1173 - 52.28 * bod - 2.6 * disox - 28.0 * fc + 271 * ph 
-            + 1474 * ammonia - 5.60 * nitrate + 1904 * phosphate - 1.758 * disox * disox 
-            + 25.4 * fc * fc - 16.83 * ph * ph - 894 * ammonia * ammonia + 0.58 * nitrate * nitrate 
-            - 902 * phosphate * phosphate + 6.558 * bod * disox + 1.85 * bod * fc + 38.6 * bod * ammonia 
-            - 32.6 * bod * phosphate + 3.22 * disox * ph - 196.4 * disox * ammonia - 84.4 * disox * phosphate 
-            + 95.5 * fc * ammonia + 11.9 * fc * nitrate + 33 * fc * phosphate - 111.5 * ph * phosphate 
-            - 139.8 * ammonia * nitrate - 840 * ammonia * phosphate + 7356 * ammonia * ammonia * ammonia
-            ;
+            FCtaguig = 364469.668407766
+            + 9587.18270647752 * bodDisplay
+            + 2155.99463876575 * disoxDisplay
+            + 240.246124730839 * fcDisplay
+            - 99967.651697831 * phDisplay
+            + 147507.556639371 * ammoniaDisplay
+            + 322922.215190419 * nitrateDisplay
+            - 178310.646598282 * phosphateDisplay
+            + 438.814766145436 * bodDisplay * bodDisplay
+            - 0.0088522559042053 * fcDisplay * fcDisplay
+            + 6726.81266232586 * phDisplay * phDisplay
+            - 620097.22006516 * ammoniaDisplay * ammoniaDisplay
+            - 5885.55361289034 * nitrateDisplay * nitrateDisplay
+            - 13.5267928815601 * bodDisplay * fcDisplay
+            - 1864.88867307752 * bodDisplay * phDisplay
+            + 14948.0173151641 * bodDisplay * ammoniaDisplay
+            + 14700.1178546766 * bodDisplay * nitrateDisplay
+            + 35588.2124170803 * bodDisplay * phosphateDisplay
+            + 6.63097993868699 * disoxDisplay * fcDisplay
+            - 86611.1050987138 * disoxDisplay * ammoniaDisplay
+            + 7793.55676865209 * disoxDisplay * phosphateDisplay
+            - 26.4982120652278 * fcDisplay * phDisplay
+            + 61.5134277024959 * fcDisplay * ammoniaDisplay
+            - 88.5608058777565 * fcDisplay * nitrateDisplay
+            - 143.618962818928 * fcDisplay * phosphateDisplay
+            + 57118.579129105 * phDisplay * ammoniaDisplay
+            - 41836.157851043 * phDisplay * nitrateDisplay
+            + 491782.149235428 * ammoniaDisplay * phosphateDisplay
+            + 82746.2045352212 * nitrateDisplay * phosphateDisplay;
+
             fishCount = FCtaguig
-            document.getElementById("answer").textContent = `Taguig/Muntinlupa = ${fishCount.toFixed(0)}`;
+            document.getElementById("answer").textContent = `Taguig/Muntinlupa = ${fishCount.toFixed(2)} metric tons`;
             document.getElementById("answera").textContent = "";
             document.getElementById("answerb").textContent = "";
             break;
         case "all":
-            FClaguna = 180224 + 11713 * bod + 12062 * disox + 323643 * fc - 66322 * ph 
-            - 85690 * ammonia + 338012 * nitrate + 23364 * phosphate - 597 * disox * disox 
-            - 80654 * fc * fc + 4657 * ph * ph - 1417496 * ammonia * ammonia 
-            + 500 * nitrate * nitrate - 1732 * bod * ph + 3882 * bod * nitrate 
-            + 26271 * bod * phosphate - 88880 * disox * ammonia - 1661 * disox * nitrate 
-            + 3231 * disox * phosphate - 32218 * fc * ph + 118688 * fc * ammonia 
-            - 104647 * fc * nitrate - 218223 * fc * phosphate + 99255 * ph * ammonia 
-            - 38315 * ph * nitrate - 15430 * ph * phosphate + 247028 * ammonia * phosphate 
-            + 69472 * fc * fc * fc + 4050967 * ammonia * ammonia * ammonia;
+            FClaguna = 17.8255290745475 
+            + 0.137591325868602 * bodDisplay 
+            - 1.03008052446161 * disoxDisplay
+            - 0.0003682548744485 * fcDisplay
+            - 0.446990494710632 * ph 
+            - 2.79981978245062 * ammoniaDisplay
+            + 0.646949393719925 * nitrateDisplay
+            + 1.23420696603556 * phosphateDisplay;
 
-            FCrizal = 296.2 - 23.3 * bod - 32.1 * disox + 139 * fc - 32.9 * ph - 207 * ammonia 
-            - 286.9 * nitrate - 22.3 * phosphate + 1.493 * bod * bod + 181.1 * fc * fc 
-            + 2258 * ammonia * ammonia - 9.46 * nitrate * nitrate - 61 * phosphate * phosphate 
-            - 0.69 * bod * disox - 26.21 * bod * fc + 2.65 * bod * ph + 20.45 * disox * fc 
-            + 3.68 * disox * ph + 1.78 * disox * nitrate - 31.4 * fc * ph + 153.9 * fc * ammonia 
-            - 18.0 * fc * nitrate + 87.8 * fc * phosphate + 8.4 * ph * ammonia + 33.02 * ph * nitrate 
-            - 217 * ammonia * phosphate - 197.8 * fc * fc * fc - 8759 * ammonia * ammonia * ammonia 
-            + 523 * phosphate * phosphate * phosphate;
+            FCrizal = -9.39632580946488 
+            + 0.0671537232292146 * bodDisplay
+            - 0.321675066889337 * disoxDisplay
+            + 0.0008873935112914 * fcDisplay
+            + 1.44721151573367 * phDisplay
+            - 0.30862709748541 * ammoniaDisplay
+            - 0.766425257434133 * nitrateDisplay
+            - 2.59762457790903 * phosphateDisplay;
             
-            FCtaguig = -1173 - 52.28 * bod - 2.6 * disox - 28.0 * fc + 271 * ph 
-            + 1474 * ammonia - 5.60 * nitrate + 1904 * phosphate - 1.758 * disox * disox 
-            + 25.4 * fc * fc - 16.83 * ph * ph - 894 * ammonia * ammonia + 0.58 * nitrate * nitrate 
-            - 902 * phosphate * phosphate + 6.558 * bod * disox + 1.85 * bod * fc + 38.6 * bod * ammonia 
-            - 32.6 * bod * phosphate + 3.22 * disox * ph - 196.4 * disox * ammonia - 84.4 * disox * phosphate 
-            + 95.5 * fc * ammonia + 11.9 * fc * nitrate + 33 * fc * phosphate - 111.5 * ph * phosphate 
-            - 139.8 * ammonia * nitrate - 840 * ammonia * phosphate + 7356 * ammonia * ammonia * ammonia;
+            FCtaguig = 364469.668407766
+            + 9587.18270647752 * bodDisplay
+            + 2155.99463876575 * disoxDisplay
+            + 240.246124730839 * fcDisplay
+            - 99967.651697831 * phDisplay
+            + 147507.556639371 * ammoniaDisplay
+            + 322922.215190419 * nitrateDisplay
+            - 178310.646598282 * phosphateDisplay
+            + 438.814766145436 * bodDisplay * bodDisplay
+            - 0.0088522559042053 * fcDisplay * fcDisplay
+            + 6726.81266232586 * phDisplay * phDisplay
+            - 620097.22006516 * ammoniaDisplay * ammoniaDisplay
+            - 5885.55361289034 * nitrateDisplay * nitrateDisplay
+            - 13.5267928815601 * bodDisplay * fcDisplay
+            - 1864.88867307752 * bodDisplay * phDisplay
+            + 14948.0173151641 * bodDisplay * ammoniaDisplay
+            + 14700.1178546766 * bodDisplay * nitrateDisplay
+            + 35588.2124170803 * bodDisplay * phosphateDisplay
+            + 6.63097993868699 * disoxDisplay * fcDisplay
+            - 86611.1050987138 * disoxDisplay * ammoniaDisplay
+            + 7793.55676865209 * disoxDisplay * phosphateDisplay
+            - 26.4982120652278 * fcDisplay * phDisplay
+            + 61.5134277024959 * fcDisplay * ammoniaDisplay
+            - 88.5608058777565 * fcDisplay * nitrateDisplay
+            - 143.618962818928 * fcDisplay * phosphateDisplay
+            + 57118.579129105 * phDisplay * ammoniaDisplay
+            - 41836.157851043 * phDisplay * nitrateDisplay
+            + 491782.149235428 * ammoniaDisplay * phosphateDisplay
+            + 82746.2045352212 * nitrateDisplay * phosphateDisplay;
 
-            document.getElementById("answer").textContent = `Laguna = ${FClaguna.toFixed(0)}`;
-            document.getElementById("answera").textContent = `Rizal = ${FCrizal.toFixed(0)}`;
-            document.getElementById("answerb").textContent = `Taguig/Muntinlupa = ${FCtaguig.toFixed(0)}`;
+            let lagunaFC = Math.pow(0.02 * FClaguna + 1, 1 / 0.02);
+            let rizalFC = (19138 * Math.exp((FCrizal - 0.436622) / 0.868131) + 1207.26) / (1 + Math.exp((FCrizal - 0.436622) / 0.868131));
+
+            document.getElementById("answer").textContent = `Laguna = ${lagunaFC.toFixed(2)} metric tons`;
+            document.getElementById("answera").textContent = `Rizal = ${rizalFC.toFixed(2)} metric tons`;
+            document.getElementById("answerb").textContent = `Taguig/Muntinlupa = ${FCtaguig.toFixed(2)} metric tons`;
             break;
         default:
             document.getElementById("answer").textContent = "Invalid location";
