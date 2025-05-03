@@ -137,29 +137,14 @@ function calculate(){
 
     switch (location){
         case "laguna":
-            FClaguna =   541246 +
-            29104 * bodDisplay -
-            9651 * disoxDisplay -
-            127203 * phDisplay -
-            405481 * ammoniaDisplay -
-            44219 * nitrateDisplay -
-            27268 * phosphateDisplay -
-            586 * bodDisplay ** 2 +
-            7570 * phDisplay ** 2 -
-            574475 * ammoniaDisplay ** 2 +
-            99419 * phosphateDisplay ** 2 +
-            1047 * bodDisplay * disoxDisplay -
-            4259 * bodDisplay * phDisplay +
-            20012 * bodDisplay * ammoniaDisplay -
-            4181 * bodDisplay * nitrateDisplay +
-            14212 * bodDisplay * phosphateDisplay +
-            1130 * disoxDisplay * phDisplay -
-            65219 * disoxDisplay * ammoniaDisplay +
-            6567 * disoxDisplay * nitrateDisplay -
-            6277 * disoxDisplay * phosphateDisplay +
-            107144 * phDisplay * ammoniaDisplay +
-            86333 * ammoniaDisplay * nitrateDisplay +
-            196525 * ammoniaDisplay * phosphateDisplay;
+            FClaguna =   -71874.2516 + 3403.8017 * bodDisplay + 2262.1574 * disoxDisplay + 359.7628 * fcDisplay + 8941.4596 * phDisplay 
+            - 555938.2609 * ammoniaDisplay + 258427.555 * nitrateDisplay - 91071.9993 * phosphateDisplay + 1578.2134 * bodDisplay * bodDisplay 
+            - 531094.4265 * ammoniaDisplay * ammoniaDisplay - 3328.6075 * nitrateDisplay * nitrateDisplay - 14.8151 * bodDisplay * fcDisplay 
+            - 1611.4812 * bodDisplay * phDisplay + 6728.1092 * bodDisplay * ammoniaDisplay + 9508.1098 * bodDisplay * nitrateDisplay 
+            + 22392.3036 * bodDisplay * phosphateDisplay + 3.9601 * disoxDisplay * fcDisplay - 95702.4078 * disoxDisplay * ammoniaDisplay 
+            - 40.6626 * fcDisplay * phDisplay + 161.9052 * fcDisplay * ammoniaDisplay - 116.1383 * fcDisplay * nitrateDisplay + 149626.466 * phDisplay * ammoniaDisplay 
+            - 32207.285 * phDisplay * nitrateDisplay + 158911.3812 * ammoniaDisplay * nitrateDisplay + 224303.1266 * ammoniaDisplay * phosphateDisplay 
+            + 27706.6192 * nitrateDisplay * phosphateDisplay;
             
             fishCount = FClaguna;
             fishCount = isNaN(fishCount) || fishCount < 0 ? 0 : fishCount;
@@ -168,13 +153,14 @@ function calculate(){
             document.getElementById("answerb").textContent = "";
             break;
         case "rizal":
-            FCrizal = 288 +
-            0.001535 * fcDisplay -
-            68.8 * phDisplay -
-            61.9 * nitrateDisplay +
-            4.1 * phDisplay ** 2 -
-            1.39 * nitrateDisplay ** 2 +
-            7.35 * phDisplay * nitrateDisplay;
+            FCrizal = 1418.7104 - 33.3082 * bodDisplay + 6.8853 * disoxDisplay - 0.1184 * fcDisplay - 346.812 * phDisplay + 2062.3839 * ammoniaDisplay 
+            - 4.9618 * nitrateDisplay + 23.6939 * phosphateDisplay - 1.525 * bodDisplay * bodDisplay - 3.3272 * disoxDisplay * disoxDisplay 
+            - 0.00003794 * fcDisplay * fcDisplay + 18.0923 * phDisplay * phDisplay - 11.4861 * nitrateDisplay * nitrateDisplay 
+            + 226.2403 * phosphateDisplay * phosphateDisplay + 0.00714 * bodDisplay * fcDisplay + 4.3392 * bodDisplay * phDisplay 
+            + 38.7234 * bodDisplay * phosphateDisplay + 0.003803 * disoxDisplay * fcDisplay + 5.5507 * disoxDisplay * phDisplay 
+            - 40.45 * disoxDisplay * ammoniaDisplay + 2.3497 * disoxDisplay * nitrateDisplay + 0.0177 * fcDisplay * phDisplay 
+            - 0.1484 * fcDisplay * ammoniaDisplay + 0.0472 * fcDisplay * nitrateDisplay - 0.4255 * fcDisplay * phosphateDisplay 
+            - 198.2209 * phDisplay * ammoniaDisplay - 15.7109 * phDisplay * phosphateDisplay - 482.2224 * ammoniaDisplay * nitrateDisplay;
 
             fishCount = (19138 * Math.exp((FCrizal - 0.436622) / 0.868131) + 1207.26) /
                         (1 + Math.exp((FCrizal - 0.436622) / 0.868131));
@@ -184,12 +170,13 @@ function calculate(){
             document.getElementById("answerb").textContent = "";
             break;
         case "taguig":
-            FCtaguig = 90.8856 -
-            20.6694 * disoxDisplay -
-            0.0182 * phDisplay +
-            1.2571 * disoxDisplay ** 2 +
-            0.000002167 * phDisplay ** 2 +
-            0.001991 * disoxDisplay * phDisplay;
+            FCtaguig = -199.7645 - 66.0003 * bodDisplay + 17.3138 * disoxDisplay + 20.2422 * phDisplay + 1757.3924 * ammoniaDisplay 
+            + 335.6692 * nitrateDisplay + 1495.3421 * phosphateDisplay - 1.2915 * bodDisplay * bodDisplay 
+            - 1.436 * disoxDisplay * disoxDisplay + 640.9735 * ammoniaDisplay * ammoniaDisplay + 383.459 * phosphateDisplay * phosphateDisplay 
+            + 8.1801 * bodDisplay * disoxDisplay + 76.157 * bodDisplay * ammoniaDisplay + 8.5391 * bodDisplay * nitrateDisplay 
+            + 9.198 * bodDisplay * phosphateDisplay - 242.3827 * disoxDisplay * ammoniaDisplay + 15.8196 * disoxDisplay * nitrateDisplay 
+            - 90.8185 * disoxDisplay * phosphateDisplay - 54.8223 * phDisplay * nitrateDisplay - 94.7751 * phDisplay * phosphateDisplay 
+            - 1757.6186 * ammoniaDisplay * phosphateDisplay - 279.7743 * nitrateDisplay * phosphateDisplay;
 
             fishCount = (0.02*FCtaguig+1)**(1/0.02)
             fishCount = isNaN(fishCount) || fishCount < 0 ? 0 : fishCount;
@@ -198,44 +185,31 @@ function calculate(){
             document.getElementById("answerb").textContent = "";
             break;
         case "all":
-            FClaguna =   541246 +
-            29104 * bodDisplay -
-            9651 * disoxDisplay -
-            127203 * phDisplay -
-            405481 * ammoniaDisplay -
-            44219 * nitrateDisplay -
-            27268 * phosphateDisplay -
-            586 * bodDisplay ** 2 +
-            7570 * phDisplay ** 2 -
-            574475 * ammoniaDisplay ** 2 +
-            99419 * phosphateDisplay ** 2 +
-            1047 * bodDisplay * disoxDisplay -
-            4259 * bodDisplay * phDisplay +
-            20012 * bodDisplay * ammoniaDisplay -
-            4181 * bodDisplay * nitrateDisplay +
-            14212 * bodDisplay * phosphateDisplay +
-            1130 * disoxDisplay * phDisplay -
-            65219 * disoxDisplay * ammoniaDisplay +
-            6567 * disoxDisplay * nitrateDisplay -
-            6277 * disoxDisplay * phosphateDisplay +
-            107144 * phDisplay * ammoniaDisplay +
-            86333 * ammoniaDisplay * nitrateDisplay +
-            196525 * ammoniaDisplay * phosphateDisplay;
+            FClaguna =   -71874.2516 + 3403.8017 * bodDisplay + 2262.1574 * disoxDisplay + 359.7628 * fcDisplay + 8941.4596 * phDisplay 
+            - 555938.2609 * ammoniaDisplay + 258427.555 * nitrateDisplay - 91071.9993 * phosphateDisplay + 1578.2134 * bodDisplay * bodDisplay 
+            - 531094.4265 * ammoniaDisplay * ammoniaDisplay - 3328.6075 * nitrateDisplay * nitrateDisplay - 14.8151 * bodDisplay * fcDisplay 
+            - 1611.4812 * bodDisplay * phDisplay + 6728.1092 * bodDisplay * ammoniaDisplay + 9508.1098 * bodDisplay * nitrateDisplay 
+            + 22392.3036 * bodDisplay * phosphateDisplay + 3.9601 * disoxDisplay * fcDisplay - 95702.4078 * disoxDisplay * ammoniaDisplay 
+            - 40.6626 * fcDisplay * phDisplay + 161.9052 * fcDisplay * ammoniaDisplay - 116.1383 * fcDisplay * nitrateDisplay + 149626.466 * phDisplay * ammoniaDisplay 
+            - 32207.285 * phDisplay * nitrateDisplay + 158911.3812 * ammoniaDisplay * nitrateDisplay + 224303.1266 * ammoniaDisplay * phosphateDisplay 
+            + 27706.6192 * nitrateDisplay * phosphateDisplay;
 
-            FCrizal = 288 +
-            0.001535 * fcDisplay -
-            68.8 * phDisplay -
-            61.9 * nitrateDisplay +
-            4.1 * phDisplay ** 2 -
-            1.39 * nitrateDisplay ** 2 +
-            7.35 * phDisplay * nitrateDisplay;
+            FCrizal = 1418.7104 - 33.3082 * bodDisplay + 6.8853 * disoxDisplay - 0.1184 * fcDisplay - 346.812 * phDisplay + 2062.3839 * ammoniaDisplay 
+            - 4.9618 * nitrateDisplay + 23.6939 * phosphateDisplay - 1.525 * bodDisplay * bodDisplay - 3.3272 * disoxDisplay * disoxDisplay 
+            - 0.00003794 * fcDisplay * fcDisplay + 18.0923 * phDisplay * phDisplay - 11.4861 * nitrateDisplay * nitrateDisplay 
+            + 226.2403 * phosphateDisplay * phosphateDisplay + 0.00714 * bodDisplay * fcDisplay + 4.3392 * bodDisplay * phDisplay 
+            + 38.7234 * bodDisplay * phosphateDisplay + 0.003803 * disoxDisplay * fcDisplay + 5.5507 * disoxDisplay * phDisplay 
+            - 40.45 * disoxDisplay * ammoniaDisplay + 2.3497 * disoxDisplay * nitrateDisplay + 0.0177 * fcDisplay * phDisplay 
+            - 0.1484 * fcDisplay * ammoniaDisplay + 0.0472 * fcDisplay * nitrateDisplay - 0.4255 * fcDisplay * phosphateDisplay 
+            - 198.2209 * phDisplay * ammoniaDisplay - 15.7109 * phDisplay * phosphateDisplay - 482.2224 * ammoniaDisplay * nitrateDisplay;
             
-            FCtaguig = 90.8856 -
-            20.6694 * disoxDisplay -
-            0.0182 * phDisplay +
-            1.2571 * disoxDisplay ** 2 +
-            0.000002167 * phDisplay ** 2 +
-            0.001991 * disoxDisplay * phDisplay;
+            FCtaguig = -199.7645 - 66.0003 * bodDisplay + 17.3138 * disoxDisplay + 20.2422 * phDisplay + 1757.3924 * ammoniaDisplay 
+            + 335.6692 * nitrateDisplay + 1495.3421 * phosphateDisplay - 1.2915 * bodDisplay * bodDisplay 
+            - 1.436 * disoxDisplay * disoxDisplay + 640.9735 * ammoniaDisplay * ammoniaDisplay + 383.459 * phosphateDisplay * phosphateDisplay 
+            + 8.1801 * bodDisplay * disoxDisplay + 76.157 * bodDisplay * ammoniaDisplay + 8.5391 * bodDisplay * nitrateDisplay 
+            + 9.198 * bodDisplay * phosphateDisplay - 242.3827 * disoxDisplay * ammoniaDisplay + 15.8196 * disoxDisplay * nitrateDisplay 
+            - 90.8185 * disoxDisplay * phosphateDisplay - 54.8223 * phDisplay * nitrateDisplay - 94.7751 * phDisplay * phosphateDisplay 
+            - 1757.6186 * ammoniaDisplay * phosphateDisplay - 279.7743 * nitrateDisplay * phosphateDisplay;
 
             let lagunaFC = FClaguna;
             let rizalFC =   (19138 * Math.exp((FCrizal - 0.436622) / 0.868131) + 1207.26) /
