@@ -162,6 +162,7 @@ function calculate(){
             196525 * ammoniaDisplay * phosphateDisplay;
             
             fishCount = FClaguna;
+            fishCount = isNaN(fishCount) || fishCount < 0 ? 0 : fishCount;
             document.getElementById("answer").textContent = `Laguna = ${fishCount.toFixed(2)} mt (t)`;
             document.getElementById("answera").textContent = "";
             document.getElementById("answerb").textContent = "";
@@ -177,6 +178,7 @@ function calculate(){
 
             fishCount = (19138 * Math.exp((FCrizal - 0.436622) / 0.868131) + 1207.26) /
                         (1 + Math.exp((FCrizal - 0.436622) / 0.868131));
+            fishCount = isNaN(fishCount) || fishCount < 0 ? 0 : fishCount;
             document.getElementById("answer").textContent = `Rizal = ${fishCount.toFixed(2)} mt (t)`;
             document.getElementById("answera").textContent = "";
             document.getElementById("answerb").textContent = "";
@@ -190,6 +192,7 @@ function calculate(){
             0.001991 * disoxDisplay * phDisplay;
 
             fishCount = (0.02*FCtaguig+1)**(1/0.02)
+            fishCount = isNaN(fishCount) || fishCount < 0 ? 0 : fishCount;
             document.getElementById("answer").textContent = `Taguig/Muntinlupa = ${fishCount.toFixed(2)} mt (t)`;
             document.getElementById("answera").textContent = "";
             document.getElementById("answerb").textContent = "";
@@ -238,6 +241,10 @@ function calculate(){
             let rizalFC =   (19138 * Math.exp((FCrizal - 0.436622) / 0.868131) + 1207.26) /
                             (1 + Math.exp((FCrizal - 0.436622) / 0.868131));
             let taguigFC = (0.02*FCtaguig+1)**(1/0.02);
+
+            lagunaFC = isNaN(lagunaFC) || lagunaFC < 0 ? 0 : lagunaFC;
+            rizalFC = isNaN(rizalFC) || rizalFC < 0 ? 0 : rizalFC;
+            taguigFC = isNaN(taguigFC) || taguigFC < 0 ? 0 : taguigFC;
 
             document.getElementById("answer").textContent = `Laguna = ${lagunaFC.toFixed(2)} mt (t)`;
             document.getElementById("answera").textContent = `Rizal = ${rizalFC.toFixed(2)} mt (t)`;
